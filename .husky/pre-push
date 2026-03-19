@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+# Block push if formatting or lint fails
+yarn format:check || exit 1
+yarn lint:ci || exit 1

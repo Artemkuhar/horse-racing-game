@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>Horse Racing Game</title>
+  </head>
+  <body>
+    <noscript>
+      <strong>This application requires JavaScript to run. Please enable JavaScript in your browser.</strong>
+    </noscript>
+    <script>
+      ;(function () {
+        const redirect = window.location.search.startsWith('?/') ? window.location.search.slice(2) : null
+        if (!redirect) {
+          return
+        }
+        const target = decodeURIComponent(redirect)
+        window.history.replaceState(null, '', window.location.pathname.replace(/\/$/, '') + '/' + target + window.location.hash)
+      })()
+    </script>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+# Run Prettier/ESLint on staged files
+yarn lint-staged

@@ -1,0 +1,41 @@
+.horse-list {
+  min-height: 520px;
+  max-height: 100%;
+  height: calc(100% - 16px);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+
+  &__header {
+    font-weight: 600;
+    background: #fff3c4;
+  }
+
+  &__body {
+    padding: 16px !important;
+    flex: 1;
+    overflow: auto;
+    min-height: 0;
+    max-height: calc(100vh - 128px);
+  }
+
+  &__placeholder {
+    margin: 0;
+    color: #7b8794;
+  }
+
+  &__color {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid #cbd2d9;
+    margin-top: 5px;
+  }
+
+  &__loading {
+    margin-bottom: 12px;
+  }
+}
